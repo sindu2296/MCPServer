@@ -1,4 +1,5 @@
 from fastmcp import FastMCP
+import os
 
 # Initialize MCP server with a name
 mcp = FastMCP("Demo Server")
@@ -9,6 +10,7 @@ def add_numbers(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
-# Run the server
 if __name__ == "__main__":
-    mcp.run()
+    # Bind to Render's assigned port and all interfaces
+    port = int(os.getenv("PORT", "8080"))
+    mcp.run(transport="sse", host="0.0.0.0", port=port)

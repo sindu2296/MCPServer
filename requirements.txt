@@ -1,1 +1,1 @@
-fastmcp
+fastmcp[sse]==2.12.5
