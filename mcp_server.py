@@ -13,4 +13,4 @@ def add_numbers(a: int, b: int) -> int:
 if __name__ == "__main__":
     # Bind to Render's assigned port and all interfaces
     port = int(os.getenv("PORT", "8080"))
-    mcp.run(transport="http", host="0.0.0.0", port=port)
+    mcp.run(transport="http", host="0.0.0.0", port=port, path="/mcp")
