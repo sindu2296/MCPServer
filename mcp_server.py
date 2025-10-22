@@ -21,5 +21,5 @@ if __name__ == "__main__":
         transport="http",
         host="0.0.0.0",
         port=port,
-        path="/mcp"  # or "/mcp/" if you prefer; just match your agent URL exactly
+        path="/mcp/"  # or "/mcp" if you prefer; just match your agent URL exactly
     )
